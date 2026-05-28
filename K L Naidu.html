@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilari Lekhendra Naidu | IT Operations Expert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fafaf9; 
+            color: #1c1917;
+        }
+
+        .elevated-card {
+            background: #ffffff;
+            border: 1px solid #e7e5e4;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .elevated-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            border-color: #4f46e5;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+            color: #44403c;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #4f46e5;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: #4f46e5;
+        }
+
+        .mobile-menu {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .skill-tag {
+            background: #f5f5f4;
+            color: #57534e;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid #e7e5e4;
+        }
+        
+        .project-icon {
+            @apply w-12 h-12 rounded-xl flex items-center justify-center text-xl mb-4 transition-colors;
+        }
+
+        .ownership-badge {
+            @apply text-[10px] uppercase tracking-tighter font-bold bg-indigo-600 text-white px-2 py-0.5 rounded mb-2 inline-block;
+        }
+    </style>
+</head>
+<body class="selection:bg-indigo-100 selection:text-indigo-900">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-stone-200 py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="text-xl font-extrabold tracking-tighter text-stone-900">
+            LEKHENDRA<span class="text-indigo-600">.</span>KILARI
+        </div>
+        
+        <div class="hidden md:flex space-x-10 font-medium">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#certifications" class="nav-link">Certifications</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+
+        <button id="menu-btn" class="md:hidden text-2xl text-stone-700">
+            <i class="fas fa-bars-staggered"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center space-y-8 text-2xl font-semibold translate-x-full mobile-menu">
+        <button id="close-btn" class="absolute top-6 right-6 text-3xl text-stone-800">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#certifications" class="mobile-link">Certifications</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 text-center bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:40px_40px]">
+        <div class="mb-6 animate-fade-in">
+            <span class="px-4 py-1.5 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100 text-xs font-bold uppercase tracking-widest">
+                Infrastructure & Cloud Operations | 6+ Years Exp
+            </span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black mb-6 text-stone-900 tracking-tight leading-tight text-center">
+            Securing <span class="gradient-text">Networks</span><br>Scaling Cloud
+        </h1>
+        <p class="text-stone-500 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed font-medium">
+            Senior IT Support Engineer & Certified Cloud Specialist. Delivering high-availability infrastructure solutions for Toll, EdTech, and Pharma environments.
+        </p>
+        <div class="flex flex-col md:flex-row gap-6">
+            <a href="#certifications" class="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-4 rounded-full font-bold transition-all hover:scale-105 shadow-xl shadow-indigo-200">
+                View Certifications
+            </a>
+            <a href="#experience" class="bg-white border border-stone-200 hover:border-indigo-200 px-10 py-4 rounded-full font-bold transition-all hover:bg-indigo-50 text-stone-700">
+                Work History
+            </a>
+        </div>
+    </section>
+
+    <!-- About & Education Section -->
+    <section id="about" class="py-32 px-6 md:px-24 bg-white border-y border-stone-100">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-20 items-start">
+            <div>
+                <h2 class="text-4xl font-black mb-8 text-stone-900">Expertise & Background.</h2>
+                <p class="text-stone-600 mb-8 leading-relaxed text-lg">
+                    I am a results-driven Senior IT Support Engineer with a proven track record in optimizing network uptime and implementing centralized monitoring. I am currently enhancing my academic profile with an MCA while maintaining mission-critical systems.
+                </p>
+                
+                <div class="mb-10">
+                    <h4 class="text-sm font-bold text-stone-400 uppercase tracking-widest mb-4">Languages Spoken</h4>
+                    <div class="flex gap-4 text-stone-700 font-semibold">
+                        <span class="flex items-center gap-2"><i class="fas fa-language text-indigo-500"></i> English</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-language text-indigo-500"></i> Hindi</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-language text-indigo-500"></i> Telugu</span>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="mt-1 bg-indigo-100 p-2 rounded-lg text-indigo-600">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900">Cloud Administration</h4>
+                            <p class="text-sm text-stone-500">Azure Administrator Associate, Virtual Networking, & Identity Management.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="mt-1 bg-indigo-100 p-2 rounded-lg text-indigo-600">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900">Enterprise Networking</h4>
+                            <p class="text-sm text-stone-500">CCNA Level Troubleshooting, LAN/WAN, DHCP, & Switching.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="space-y-6">
+                <h3 class="text-2xl font-black text-stone-900 mb-6">Education</h3>
+                <div class="p-6 elevated-card rounded-2xl border-l-4 border-l-indigo-600">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-stone-900 text-lg">Master of Computer Applications (MCA)</h4>
+                        <span class="text-indigo-600 text-sm font-bold">2024 - 2026</span>
+                    </div>
+                    <p class="text-stone-500">Andhra University, Visakhapatnam</p>
+                </div>
+                <div class="p-6 elevated-card rounded-2xl">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-stone-900 text-lg">Bachelor of Science (B.Sc)</h4>
+                        <span class="text-stone-400 text-sm font-bold">2014</span>
+                    </div>
+                    <p class="text-stone-500">Dr. B. R. Ambedkar University, Srikakulam</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-32 px-6 md:px-12 bg-stone-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-stone-900 mb-4">Professional Certifications</h2>
+                <p class="text-stone-500 font-medium">Industry-standard credentials verifying technical mastery.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="elevated-card p-10 rounded-3xl text-center">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-900 mb-2">CCNA</h3>
+                    <p class="text-stone-500 text-sm mb-4">Cisco Certified Network Associate</p>
+                    <span class="skill-tag border-blue-200 text-blue-600 bg-blue-50">Active</span>
+                </div>
+                <div class="elevated-card p-10 rounded-3xl text-center">
+                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-900 mb-2">Azure Administrator Associate</h3>
+                    <p class="text-stone-500 text-sm mb-4">Microsoft Certified: AZ-104</p>
+                    <span class="skill-tag border-sky-200 text-sky-600 bg-sky-50">Active</span>
+                </div>
+                <div class="elevated-card p-10 rounded-3xl text-center">
+                    <div class="w-16 h-16 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-900 mb-2">Azure Network Engineer</h3>
+                    <p class="text-stone-500 text-sm mb-4">Microsoft Certified: AZ-700</p>
+                    <span class="skill-tag border-indigo-200 text-indigo-600 bg-indigo-50">Active</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Projects Section -->
+    <section id="projects" class="py-32 px-6 md:px-12 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <h2 class="text-4xl font-black text-stone-900 mb-4">Technical Projects</h2>
+                <p class="text-stone-500 font-medium">Independent systems designed and implemented to solve operational challenges.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="elevated-card p-8 rounded-3xl">
+                    <span class="ownership-badge">Independent Project</span>
+                    <div class="project-icon bg-indigo-100 text-indigo-600">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-900 mb-3">Biometric Attendance</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed">Self-implemented central management system for biometric access control across high-volume learning centers.</p>
+                </div>
+
+                <div class="elevated-card p-8 rounded-3xl">
+                    <span class="ownership-badge">Independent Project</span>
+                    <div class="project-icon bg-purple-100 text-purple-600">
+                        <i class="fas fa-boxes-stacked"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-900 mb-3">Asset Management</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed">Designed end-to-end hardware tracking workflows to meet strict regulatory audit standards (FDA/GxP).</p>
+                </div>
+
+                <div class="elevated-card p-8 rounded-3xl">
+                    <span class="ownership-badge">Independent Project</span>
+                    <div class="project-icon bg-blue-100 text-blue-600">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-900 mb-3">Network Monitoring</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed">Custom monitoring solution for real-time tracking of FASTag lane infrastructure and peripheral health.</p>
+                </div>
+
+                <div class="elevated-card p-8 rounded-3xl">
+                    <span class="ownership-badge">Independent Project</span>
+                    <div class="project-icon bg-emerald-100 text-emerald-600">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-900 mb-3">IT Helpdesk System</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed">Architected L1/L2 support desk procedures, integrating automated reporting and root cause analysis tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-32 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl font-black text-stone-900 mb-4">Professional Journey</h2>
+            <p class="text-stone-500 font-medium">Years of specialized experience in critical IT operations.</p>
+        </div>
+
+        <div class="space-y-12">
+            <!-- Sri Sai Enterprises -->
+            <div class="elevated-card rounded-3xl p-8 md:p-10 flex flex-col md:flex-row gap-8 border-l-4 border-l-indigo-600">
+                <div class="md:w-1/3">
+                    <span class="text-indigo-600 font-bold">Oct 2025 - Present</span>
+                    <h3 class="text-2xl font-black text-stone-900 mt-2">Senior IT Support Engineer</h3>
+                    <p class="text-stone-500 font-bold uppercase text-xs tracking-widest mt-1">Sri Sai Enterprises</p>
+                </div>
+                <div class="md:w-2/3">
+                    <ul class="text-stone-600 space-y-3 list-disc pl-4">
+                        <li>Manage centralized IT operations for multiple toll plazas ensuring transaction continuity.</li>
+                        <li>Monitor real-time TMS performance, FASTag processing, and network connectivity.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Unacademy -->
+            <div class="elevated-card rounded-3xl p-8 md:p-10 flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/3">
+                    <span class="text-stone-400 font-bold">2024 - 2025</span>
+                    <h3 class="text-2xl font-black text-stone-900 mt-2">IT Executive</h3>
+                    <p class="text-stone-500 font-bold uppercase text-xs tracking-widest mt-1">Unacademy (Quess Corp)</p>
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-stone-600 leading-relaxed">Delivered end-to-end IT support for smart classrooms, labs, and learning infrastructure. Supported smart boards, projectors, and biometric devices.</p>
+                </div>
+            </div>
+
+            <!-- Ocimum Labs -->
+            <div class="elevated-card rounded-3xl p-8 md:p-10 flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/3">
+                    <span class="text-stone-400 font-bold">2023 - 2024</span>
+                    <h3 class="text-2xl font-black text-stone-900 mt-2">IT Executive</h3>
+                    <p class="text-stone-500 font-bold uppercase text-xs tracking-widest mt-1">Ocimum Labs</p>
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-stone-600 leading-relaxed">Managed infrastructure for pharmaceutical plants. Maintained validated systems under GxP/GMP/FDA compliance requirements.</p>
+                </div>
+            </div>
+
+            <!-- Sahakar Global Ltd -->
+            <div class="elevated-card rounded-3xl p-8 md:p-10 flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/3">
+                    <span class="text-stone-400 font-bold">Aug 2019 - Apr 2023</span>
+                    <h3 class="text-2xl font-black text-stone-900 mt-2">IT Support Engineer</h3>
+                    <p class="text-stone-500 font-bold uppercase text-xs tracking-widest mt-1">Sahakar Global Ltd</p>
+                </div>
+                <div class="md:w-2/3">
+                    <ul class="text-stone-600 space-y-3 list-disc pl-4">
+                        <li>Provided on-site IT and network support for toll plaza systems and lane infrastructure.</li>
+                        <li>Troubleshot LAN/WAN connectivity, hardware failures, and system performance issues.</li>
+                        <li>Supported FASTag readers, AVC sensors, cameras, POS devices, and IoT-based toll equipment.</li>
+                        <li>Ensured continuous toll operations through proactive monitoring and rapid incident resolution.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 px-6 md:px-12 bg-stone-900 text-white">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-20">
+            <div>
+                <h2 class="text-5xl font-black mb-8">Let's Connect.</h2>
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-stone-800 flex items-center justify-center text-indigo-400">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-stone-500 uppercase font-bold tracking-widest">Email</p>
+                            <p class="font-bold">lekhendra.kilari@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-stone-800 flex items-center justify-center text-indigo-400">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-stone-500 uppercase font-bold tracking-widest">Phone</p>
+                            <p class="font-bold">+91 9493085185</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white/5 backdrop-blur-sm p-8 md:p-10 rounded-3xl border border-white/10">
+                <form id="contact-form" class="space-y-6">
+                    <input type="text" placeholder="Name" class="w-full bg-stone-800/50 border border-stone-700 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">
+                    <textarea rows="4" placeholder="How can I assist you today?" class="w-full bg-stone-800/50 border border-stone-700 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"></textarea>
+                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-black py-5 rounded-xl transition-all">
+                        SEND MESSAGE
+                    </button>
+                </form>
+                <div id="status-message" class="hidden mt-6 p-4 rounded-xl text-center bg-indigo-500 text-white font-bold">
+                    Message Sent Successfully!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-6 bg-stone-900 text-stone-500 text-center border-t border-stone-800">
+        <p class="text-xs font-bold uppercase tracking-[0.2em]">
+            &copy; 2026 KILARI LEKHENDRA NAIDU &bull; Professional IT Portfolio
+        </p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        const toggleMenu = () => mobileMenu.classList.toggle('translate-x-full');
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+        const contactForm = document.getElementById('contact-form');
+        const statusMessage = document.getElementById('status-message');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            contactForm.style.opacity = '0.3';
+            setTimeout(() => {
+                contactForm.classList.add('hidden');
+                statusMessage.classList.remove('hidden');
+            }, 1000);
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-12');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-12');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
